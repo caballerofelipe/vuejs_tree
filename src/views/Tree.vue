@@ -61,8 +61,8 @@ export default {
 }
 
 #treeZone {
-	overflow: hidden; // Used to make the interface fixed to that nothing moves from its place and for zoom
-	// flex-grow: 2; /* FCG: May not be needed. */
+	overflow: hidden; /* Used to make the interface fixed to that nothing moves from its place and for zoom. */
+	flex-grow: 2; /* When the content is small this allows the block to grow and take al available space. */
 }
 
 #debug_button {
