@@ -83,25 +83,23 @@ Possible con:
 - Maybe with `inline-block` the tree could be unordered easily when changing outside CSS but I haven't done any testing.
 
 ## Project setup
-To see the project in action, after getting the files on hard drive (git, download or whatever), run:
-```
+``` bash
+# To see the project in action, after getting the files on hard drive (git, download or whatever), run:
 npm install
-```
-Compiles and hot-reloads for development:
-```
+
+# Compiles and hot-reloads for development:
 npm run serve
-```
-Compiles and minifies for production:
-```
+
+# Compiles and minifies for production:
 npm run build
-```
-Lints and fixes files:
-```
+
+# Lints and fixes files:
 npm run lint
 ```
 Custom configuration, see [Configuration Reference](https://cli.vuejs.org/config/).
 
 ## Initial Installation
+This is what I did on the initial installation.
 
 ### Vue CLI install
 Install Vue CLI ([Installation | Vue CLI](https://cli.vuejs.org/guide/installation.html)):
