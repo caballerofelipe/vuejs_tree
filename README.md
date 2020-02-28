@@ -1,12 +1,12 @@
 # vuejs_tree
 A tree graph made using Vue.js and html+css.
 
-![Simple tree displayed](ScreenShot.png )
+![Simple tree displayed](ScreenShot.png)
 
 ## Requirements
 - Requirements
- - ([Node.js](https://nodejs.org/))
- - npm (Should come with node)
+	- ([Node.js](https://nodejs.org/))
+	- npm (Should come with node)
 - Used Vue CLI version: [4.2.2](https://github.com/vuejs/vue-cli/releases/tag/v4.2.2) .
 
 ## Intro
@@ -83,7 +83,7 @@ Possible con:
 - Maybe with `inline-block` the tree could be unordered easily when changing outside CSS but I haven't done any testing.
 
 ## Project setup
-``` bash
+```bash
 # To see the project in action, after getting the files on hard drive (git, download or whatever), run:
 npm install
 
@@ -103,23 +103,23 @@ This is what I did on the initial installation.
 
 ### Vue CLI install
 Install Vue CLI ([Installation | Vue CLI](https://cli.vuejs.org/guide/installation.html)):
-```
+```bash
 npm install -g @vue/cli
 ```
 
 ### Creating the project
 This is how I created the Vue.js project ([Creating a Project | Vue CLI](https://cli.vuejs.org/guide/creating-a-project.html#vue-create)):
-```
+```bash
 vue create vuejs_tree
 ```
 And these are the selections made:
-``` bash
+```bash
 Vue CLI v4.2.2
 ? Please pick a preset:
   default (babel, eslint)
 ❯ Manually select features
 ```
-```
+```bash
 ? Check the features needed for your project:
  ◉ Babel
  ◯ TypeScript
@@ -131,11 +131,11 @@ Vue CLI v4.2.2
  ◯ Unit Testing
  ◯ E2E Testing
 ```
-```
+```bash
 ? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n)
  n
 ```
-```
+```bash
 ? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): (Use ar
 row keys)
 ❯ Sass/SCSS (with dart-sass)
@@ -143,25 +143,25 @@ row keys)
   Less
   Stylus
 ```
-```
+```bash
 ? Pick a linter / formatter config: (Use arrow keys)
 ❯ ESLint with error prevention only
   ESLint + Airbnb config
   ESLint + Standard config
   ESLint + Prettier
 ```
-```
+```bash
 ? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selectio
 n)
 ❯◉ Lint on save
  ◯ Lint and fix on commit
 ```
-```
+```bash
 ? Where do you prefer placing config for Babel, ESLint, etc.? (Use arrow keys)
 ❯ In dedicated config files
   In package.json
 ```
-```
+```bash
 ? Save this as a preset for future projects? (y/N) N
 ```
 
