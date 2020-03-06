@@ -9,7 +9,6 @@
 			v-bind:style="{ transform: 'scale('+treeZoom+')', transformOrigin: 'left top', width: 'calc(100%/'+treeZoom+')', height: 'calc(100%/'+treeZoom+')' }"
 			/>
 		</div>
-		<controls />
 	</div>
 </template>
 
