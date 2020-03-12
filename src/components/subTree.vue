@@ -1,26 +1,26 @@
 <template>
-	<div class="node"
+	<div class="nodeAndSubTree"
 		@dragstart.stop='dragstart'
 		@dragend.stop='dragend'
 		@dragenter.stop='dragenter'
 		>
-		<div class="nodeBubble" title="Incomplete drag and drop features... see the docs.">
+		<div class="node" title="Incomplete drag and drop features... see the docs.">
 			{{node.nodeValue}}<br>(id: {{node.id}})
 		</div>
-		<nodeRow
+		<subTreesRow
 			v-if='node.processTree && node.processTree.length'
-			v-bind:nodeRow='node.processTree'
+			v-bind:subTreesRow='node.processTree'
 		/>
 	</div>
 </template>
 
 <script>
-import nodeRow from '@/components/nodeRow.vue'
+import subTreesRow from '@/components/subTreesRow.vue';
 
 export default {
-	name: 'node',
+	name: 'subTree',
 	components: {
-		nodeRow
+		subTreesRow
 	},
 	props: [
 		'node'
@@ -49,9 +49,9 @@ export default {
 			/* FCG: WARNING only works if window.FCG_DEBUG, set it manually in the console. */
 			let theElement = this.$el;
 			if(window.FCG_DEBUG){
-				window.console.log('dragenter()')
-				window.console.log(this.node.id)
-				window.console.log(theElement)
+				window.console.log('dragenter()');
+				window.console.log(this.node.id);
+				window.console.log(theElement);
 			}
 		}
 	},
@@ -65,7 +65,7 @@ export default {
 <style lang="scss">
 @import '@/sass/config.scss';
 
-.node {
+.nodeAndSubTree {
 	padding: $node_padding;
 	font-size:12px;
 
@@ -94,11 +94,10 @@ export default {
 		height: calc(#{$node_padding} - #{$hierarchy_line_width}); /* To avoid having the line on top of the node. */
 	}
 	&:last-child:after {
-		width: 0px; /* Necessary to avoid nodeRow horizontal scrolling. */
+		width: 0px; /* Necessary to avoid subTreesRow horizontal scrolling. */
 	}
-
 }
-.nodeBubble {
+.node {
 	background-color: rgba(200,130,210);
 	color: white;
 	border-radius: 100%;
