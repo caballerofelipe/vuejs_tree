@@ -1,16 +1,19 @@
 <template>
-	<div class="nodeAndSubTree"
-		@dragstart.stop='dragstart'
-		@dragend.stop='dragend'
-		@dragenter.stop='dragenter'
-		>
-		<div class="node" title="Incomplete drag and drop features... see the docs.">
-			{{node.nodeValue}}<br>(id: {{node.id}})
+	<div class="subTree">
+		<div class="nodeAndSubTree"
+			draggable="true"
+			@dragstart.stop='dragstart'
+			@dragend.stop='dragend'
+			@dragenter.stop='dragenter'
+			>
+			<div class="node" title="Incomplete drag and drop features... see the docs.">
+				{{node.nodeValue}}<br>(id: {{node.id}})
+			</div>
+			<subTreesRow
+				v-if='node.processTree && node.processTree.length'
+				v-bind:subTreesRow='node.processTree'
+			/>
 		</div>
-		<subTreesRow
-			v-if='node.processTree && node.processTree.length'
-			v-bind:subTreesRow='node.processTree'
-		/>
 	</div>
 </template>
 
@@ -18,7 +21,7 @@
 import subTreesRow from '@/components/subTreesRow.vue';
 
 export default {
-	name: 'subTree',
+	name: 'node',
 	components: {
 		subTreesRow
 	},
@@ -54,10 +57,6 @@ export default {
 				window.console.log(theElement);
 			}
 		}
-	},
-	mounted(){
-		let theElement = this.$el;
-		theElement.draggable = true;
 	}
 }
 </script>
@@ -65,10 +64,7 @@ export default {
 <style lang="scss">
 @import '@/sass/config.scss';
 
-.nodeAndSubTree {
-	padding: $node_padding;
-	font-size:12px;
-
+.subTree {
 	/* For tree creation. */
 	display: inline-block;
 	vertical-align: top;
@@ -96,6 +92,11 @@ export default {
 	&:last-child:after {
 		width: 0px; /* Necessary to avoid subTreesRow horizontal scrolling. */
 	}
+}
+
+.nodeAndSubTree {
+	padding: $node_padding;
+	font-size:12px;
 }
 .node {
 	background-color: rgba(200,130,210);

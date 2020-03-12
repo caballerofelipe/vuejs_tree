@@ -69,7 +69,7 @@ export default {
 		&:before, &:after {
 			border: 0;
 		}
-		> .nodeAndSubTree {
+		> .subTree {
 			&:before, &:after {
 				border: 0;
 			}
