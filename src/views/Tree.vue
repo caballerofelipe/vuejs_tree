@@ -17,7 +17,7 @@ import controls from '@/components/controls.vue'
 import nodeRow from '@/components/nodeRow.vue'
 
 export default {
-  name: 'App',
+  name: 'Tree',
   components: {
     controls,
 	nodeRow

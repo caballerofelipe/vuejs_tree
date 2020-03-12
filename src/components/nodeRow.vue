@@ -55,6 +55,6 @@ export default {
 		content: '';
 	}
 
-	/* To create tree using flex see the docs. */
+	/* To create tree using flex see https://github.com/caballerofelipe/vuejs_tree/blob/master/README.md#using-css-for-the-tree. */
 }
 </style>
