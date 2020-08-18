@@ -1,6 +1,8 @@
 # vuejs_tree
 A tree graph made using Vue.js and html+css.
 
+See [the demo](https://caballerofelipe.github.io/vuejs_tree/).
+
 ![Simple tree displayed](ScreenShot.png)
 
 ## Requirements
