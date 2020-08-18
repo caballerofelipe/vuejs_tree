@@ -24,12 +24,11 @@ This is what this project does:
 - Allows zoom (with buttons).
 - Shows current store (toggle with a button).
 - Add lines to join the bottom of the parent node to the top of a node creating a hierarchical structure.
-- Some drag and drop stuff is implemented but it isn't working yet.
+- Using drag and drop, allows nodes movement from one location to another. A node can be moved on the sides of an existing node with children and can be moved below a node without children.
+- Add new nodes using drag and drop with the '+' node above.
 
 ## To do
 This are some functionalities that would be nice and maybe will be done in the future:
-- Allow nodes movement. Using drag and drop it would be nice to be able to move nodes from one location to another, that is change their parent and change where they appear under a parent.  
-<span style="font-size:0.8em;">This would work using draggable but the actual movement would be implemented in Vuex (the store) to allow Vue to recreate the tree with the changed structure.</span>
 - Add a small box showing the full tree with a box showing the current view.
 
 ## Using CSS for the tree
@@ -114,55 +113,65 @@ vue create vuejs_tree
 ```
 And these are the selections made:
 ```bash
-Vue CLI v4.2.2
+Vue CLI v4.5.4
 ? Please pick a preset:
-  default (babel, eslint)
+  Default ([Vue 2] babel, eslint)
+  Default (Vue 3 Preview) ([Vue 3] babel, eslint)
 ❯ Manually select features
 ```
 ```bash
 ? Check the features needed for your project:
+ ◉ Choose Vue version
  ◉ Babel
  ◯ TypeScript
  ◯ Progressive Web App (PWA) Support
  ◉ Router
  ◉ Vuex
-❯◉ CSS Pre-processors
+ ◉ CSS Pre-processors
  ◉ Linter / Formatter
- ◯ Unit Testing
+❯◉ Unit Testing
  ◯ E2E Testing
+```
+```bash
+? Choose a version of Vue.js that you want to start the project with
+❯ 2.x
+  3.x (Preview)
 ```
 ```bash
 ? Use history mode for router? (Requires proper server setup for index fallback in production) (Y/n)
  n
 ```
 ```bash
-? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default): (Use ar
-row keys)
+? Pick a CSS pre-processor (PostCSS, Autoprefixer and CSS Modules are supported by default):
 ❯ Sass/SCSS (with dart-sass)
   Sass/SCSS (with node-sass)
   Less
   Stylus
 ```
 ```bash
-? Pick a linter / formatter config: (Use arrow keys)
+? Pick a linter / formatter config:
 ❯ ESLint with error prevention only
   ESLint + Airbnb config
   ESLint + Standard config
   ESLint + Prettier
 ```
 ```bash
-? Pick additional lint features: (Press <space> to select, <a> to toggle all, <i> to invert selectio
-n)
+? Pick additional lint features:
 ❯◉ Lint on save
  ◯ Lint and fix on commit
 ```
 ```bash
-? Where do you prefer placing config for Babel, ESLint, etc.? (Use arrow keys)
+? Pick a unit testing solution:
+  Mocha + Chai
+❯ Jest
+```
+```bash
+? Where do you prefer placing config for Babel, ESLint, etc.?
 ❯ In dedicated config files
   In package.json
 ```
 ```bash
-? Save this as a preset for future projects? (y/N) N
+? Save this as a preset for future projects? (y/N) n
 ```
 
 ## Extras
